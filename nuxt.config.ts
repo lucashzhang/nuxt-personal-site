@@ -4,4 +4,17 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/content"],
   css: ["~/assets/global.css"],
+  app: {
+    head: {
+      title: "Lucas Zhang",
+      htmlAttrs: {
+        lang: "en",
+      },
+    },
+  },
+  nitro: {
+    prerender: {
+      routes: ["/"],
+    },
+  },
 });
